@@ -1,0 +1,20 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+        <div slot="title">
+            My first component
+        </div>
+        <div slot="actions">
+            <lightning-button label="Get Date" slot="actions" onclick={updateDate}></lightning-button>
+        </div>
+        <div slot="footer">Press the button to get the date</div>
+        <div class="slds-p-around_medium">
+            <!-- Card Body -->
+             Hello World ! My name is {userName}!
+             <template if:true={currentDate}>
+                <br/>
+                The date is currently:
+                <lightning-formatted-date-time value={currentDate} day="2-digit" month="2-digit" year="2-digit" weekday="long"></lightning-formatted-date-time>
+             </template>
+            </div>
+    </lightning-card>    
+</template>
